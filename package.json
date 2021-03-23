@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/agchavez/proyectoTeoria/issues"
   },
-  "homepage": "https://github.com/agchavez/proyectoTeoria#readme"
+  "homepage": "https://github.com/agchavez/proyectoTeoria#readme",
+  "dependencies": {
+    "cli-table": "^0.3.6",
+    "colors": "^1.4.0",
+    "inquirer": "^8.0.0"
+  }
 }
