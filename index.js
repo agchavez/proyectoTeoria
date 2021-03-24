@@ -1,18 +1,16 @@
 require('colors');
 const aditivo = require('./helpers/aditivo');
-const {inquirerMenu,
-    pause,
-    leerInput} = require('./helpers/insquired');
+const { inquirerMenu, pause, leerInput } = require('./helpers/insquired');
 const mixto = require('./helpers/mixto');
 const multiplicativo = require('./helpers/multiplicativo');
-const main = async()=> {
+
+const main = async () => {
     let rep;
-    
+
     do {
         //Imprimir el menu
         rep = await inquirerMenu();
         
-
         switch(rep){
             case 1:
                 //Aditivo
@@ -39,7 +37,6 @@ const main = async()=> {
                 var xo = await leerInput(`Ingrese el valor de la variable ${'Xo'.green}: `);
                 var ca = await leerInput(`Ingrese la cantidad de numeros que desea generar: `);
                 mixto(parseInt(xo),parseInt(a),parseInt(g),parseInt(c),parseInt(ca))
-                
                 break;
             
         }
@@ -47,7 +44,6 @@ const main = async()=> {
         
     } while (rep !== 0);
     console.clear();
-
 }
 
 main();

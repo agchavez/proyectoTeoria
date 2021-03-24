@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 require('colors');
+
 const menuOpts = [
     {
         type: 'list',
