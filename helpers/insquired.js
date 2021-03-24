@@ -1,6 +1,13 @@
+/*
+    ! Modulo inquirer
+    * Creacion del menu interactivo de consola
+*/
+
+// Modulos requeridos
 const inquirer = require('inquirer');
 require('colors');
 
+// Arreglo de objetos que define las opciones del menu
 const menuOpts = [
     {
         type: 'list',
@@ -29,26 +36,35 @@ const menuOpts = [
 ];
 
 
-const inquirerMenu = async ()=>{
+const inquirerMenu = async () => {
+    /*
+     ! Metodo inquirerMenu
+     * Se encarga de cargar el menu principal a partir de las opciones creadas en el arreglo menuOpts
+     */
     console.clear();
     console.log("=====================".green);
     console.log("Menu principal");
     console.log("=====================\n".green);
-    const {option} = await inquirer.prompt(menuOpts);
+    const { option } = await inquirer.prompt(menuOpts);
     return option;
 }
 
-const pause = async ()=>{
+const pause = async () => {
     const question = [
         {
             type: 'input',
             name: `pause`,
-            message: `Presione ${'ENTER'.green} para continuar...`}]
+            message: `Presione ${'ENTER'.green} para continuar...`}
+        ]
 
-     await inquirer.prompt(question);
+    await inquirer.prompt(question);
 }
 
-const leerInput = async(menssage) =>{
+const leerInput = async (menssage) => {
+    /*
+     ! Metodo leerInput
+     * Se encarga de leer los valores y verificar si son correctos
+     */
     const question = [
         {
             type: 'input',
@@ -67,8 +83,6 @@ const leerInput = async(menssage) =>{
             }
         }
     ];
-    
-
     
     const{desc} = await inquirer.prompt(question);
     return desc;

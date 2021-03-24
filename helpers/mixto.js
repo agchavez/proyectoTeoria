@@ -1,15 +1,25 @@
-require('colors');
+/*
+    ! Modulo mixto
+    * Logica para el metodo mixto
+*/ 
 
+// Moulos externos
+require('colors');
 var Table = require('cli-table');
 
 
 const mixto = (xo, a,g,c, cantidad)=>{
+    /*
+        ! Metodo mixto  
+    */ 
     console.clear();
 
+    // Mostrar mensaje al usuario
     console.log("\n============================".green);
     console.log("Metodo congruencial mixto");
     console.log("==============================\n".green);
 
+    // Cracion de la tabla que se muestra en consola con los resultados
     var table = new Table({
         head: ['n'.green,'Xi'.green, 'aXi+c'.green, '(aXi+c)%(m-1)'.green,'ri'.green]
             , colWidths: [5,30, 30, 20,30]
