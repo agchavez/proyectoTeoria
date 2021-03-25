@@ -1,19 +1,31 @@
-require('colors');
+/*
+    ! Modulo aditivo
+    * Logica para el metodo aditivo
+*/ 
 
+// Modulos externos
+require('colors');
 var Table = require('cli-table');
 
+const aditivo = async (xo, a, g, c, cantidad) => {
+    /*
+        ! Metodo aditivo  
+    */ 
 
-const aditivo = async(xo, a,g,c, cantidad)=>{
+    // Limpiar la consola
     console.clear();
 
+    // Mostrar mensaje al usuario
     console.log("\n============================".green);
     console.log("Metodo congruencial aditivo");
     console.log("==============================\n".green);
 
+    // Cracion de la tabla que se muestra en consola con los resultados
     var table = new Table({
         head: ['n'.green,'Xi'.green, 'aXi+C'.green, '(aXi+C)%m'.green,'ri'.green]
             , colWidths: [5,30, 30, 20,30]
     });
+
     const m = Math.pow(2,g);
     const list = [];
     let xi = xo;
@@ -48,12 +60,6 @@ const aditivo = async(xo, a,g,c, cantidad)=>{
     }
 
     console.log(table.toString());
-    
-
-
-    
-
 }
-
 
 module.exports = aditivo

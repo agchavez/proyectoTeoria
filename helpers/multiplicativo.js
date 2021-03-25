@@ -1,15 +1,26 @@
-require('colors');
+/*
+    ! Modulo multiplicativo
+    * Logica para el metodo multiplicativvo
+*/ 
 
+// Modulos externos
+require('colors');
 var Table = require('cli-table');
 
+const multiplicativo = (xo, a, g, cantidad) => {
+    /*
+        ! Metodo multiplicativo  
+    */ 
 
-const multiplicativo = (xo, a,g, cantidad)=>{
+    // Limpiar la consola
     console.clear();
 
+    // Mostrar mensaje al usuario
     console.log("\n============================".green);
     console.log("Metodo congruencial multiplicativo");
     console.log("==============================\n".green);
 
+    // Cracion de la tabla que se muestra en consola con los resultados
     var table = new Table({
         head: ['n'.green,'Xi'.green, 'a*Xi'.green, '(aXi)%m'.green,'ri'.green]
             , colWidths: [5,30, 30, 20,30]
@@ -46,10 +57,8 @@ const multiplicativo = (xo, a,g, cantidad)=>{
          }
          
     }
-
+    
     console.log(table.toString());
-
 }
-
 
 module.exports = multiplicativo;
