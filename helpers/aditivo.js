@@ -48,6 +48,9 @@ const aditivo = async(xo, a,g,c, cantidad)=>{
     }
 
     console.log(table.toString());
+    /*
+    Este solo es un mensaje de prueba
+    */
     
 
 
